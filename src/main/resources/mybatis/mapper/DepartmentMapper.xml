@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.object.oasystem.mapper.DepartmentMapper">
+
+    <select id="getDepartment" resultType="com.object.oasystem.model.Department">
+        select * from department where sn=#{sn}
+    </select>
+
+    <insert id="insert" parameterType="com.object.oasystem.model.Department">
+        insert into department values(#{sn},#{name},#{address})
+    </insert>
+
+    <update id="update" parameterType="com.object.oasystem.model.Department">
+        update department set name=#{name},address=#{address} where sn=#{sn}
+    </update>
+    
+    <delete id="delete" parameterType="String">
+        delete from department where sn=#{sn}
+    </delete>
+
+    <select id="selectAll" resultType="com.object.oasystem.model.Department">
+        select * from department
+    </select>
+</mapper>

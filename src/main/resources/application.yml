@@ -1,0 +1,62 @@
+spring:
+  datasource:
+    #基本数据源配置
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/oa?serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    #   数据源其他配置
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    #   配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+    filters: stat,wall,slf4j
+    maxPoolPreparedStatementPerConnectionSize: 20
+    useGlobalDataSourceStat: true
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+    #thymeleaf模板引擎配置
+#    thymeleaf:
+#      prefix: classpath:/templates/pages/
+#      suffix: .html
+#      mode: HTML5
+#      encoding: UTF-8
+#      content-type: text/html
+#      cache: false
+
+  resources:
+    static-locations: classpath:/static
+  mvc:
+    view:
+      prefix: /WEB-INF/
+      suffix: .jsp
+
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+server:
+  port: 8080
+
+#thymeleaf start
+#视图解析器的前缀放在这个文件夹
+#spring.thymeleaf.prefix=classpath:/templates/
+  #后缀
+  #spring.thymeleaf.suffix=.html
+  #模式
+  #spring.thymeleaf.mode=LEGACYHTML5
+  #spring.thymeleaf.servlet.content-type=text/html
+  #编码格式
+  #spring.thymeleaf.encoding=utf-8
+  #不用缓存
+ # spring.thymeleaf.cache=false
+  #spring.resources.chain.strategy.content.enabled=true
+  #spring.resources.chain.strategy.content.paths=/**
+  #thymeleaf end
