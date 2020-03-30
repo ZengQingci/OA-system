@@ -13,7 +13,7 @@ public class DepartmentServiceImpl implements DepartmentService {
     @Resource
     private DepartmentMapper departmentMapper;
     @Override
-    public Department getDepartment(Integer sn) {
+    public Department getDepartment(String sn) {
         return departmentMapper.getDepartment(sn);
     }
 

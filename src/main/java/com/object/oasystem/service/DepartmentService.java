@@ -5,7 +5,7 @@ import com.object.oasystem.model.Department;
 import java.util.List;
 
 public interface DepartmentService {
-    Department getDepartment(Integer sn);
+    Department getDepartment(String sn);
     void add(Department department);
     void edit(Department department);
     void remove(String sn);

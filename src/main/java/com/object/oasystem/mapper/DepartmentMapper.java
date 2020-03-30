@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 @Repository("DepartmentMapper")
 public interface DepartmentMapper {
-    Department getDepartment(Integer sn);
+    Department getDepartment(String sn);
 
     void insert(Department department);
     void update(Department department);
