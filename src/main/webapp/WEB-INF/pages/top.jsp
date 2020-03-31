@@ -105,11 +105,11 @@
                     </a>
                     <ul class="nav sub-nav">
                         <li>
-                            <a href="/employee/list">
+                            <a href="/employee/emps">
                                 <span class="glyphicon glyphicon-calendar"></span> 所有员工 </a>
                         </li>
                         <li class="active">
-                            <a href="/employee/to_add">
+                            <a href="/employee/to_emps_add">
                                 <span class="glyphicon glyphicon-check"></span> 添加员工 </a>
                         </li>
                     </ul>

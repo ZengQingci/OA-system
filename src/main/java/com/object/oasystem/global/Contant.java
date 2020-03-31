@@ -1,17 +1,14 @@
 package com.object.oasystem.global;
-
 import java.util.ArrayList;
 import java.util.List;
 
-/*声明常量*/
 public class Contant {
-//    职务
-    private static final String POST_STAFF="员工";
-    private static final String POST_FM="部门经理";
-    private static final String POST_GM="总经理";
-    private static final String POST_CASHIER="财务";
-
-    public List<String> getPosts(){
+    //职务
+    public static final String POST_STAFF="员工";
+    public static final String POST_FM="部门经理";
+    public static final String POST_GM="总经理";
+    public static final String POST_CASHIER="财务";
+    public static List<String> getPosts(){
         List<String> list = new ArrayList<String>();
         list.add(POST_STAFF);
         list.add(POST_FM);
@@ -20,8 +17,8 @@ public class Contant {
         return list;
     }
 
-//    费用类别
-    public List<String> getItems(){
+    //费用类别
+    public static List<String> getItems(){
         List<String> list = new ArrayList<String>();
         list.add("交通");
         list.add("餐饮");
@@ -30,7 +27,7 @@ public class Contant {
         return list;
     }
 
-//    报销单状态
+    //报销单状态
     public static final String CLAIMVOUCHER_CREATED="新创建";
     public static final String CLAIMVOUCHER_SUBMIT="已提交";
     public static final String CLAIMVOUCHER_APPROVED="已审核";
@@ -38,10 +35,11 @@ public class Contant {
     public static final String CLAIMVOUCHER_TERMINATED="已终止";
     public static final String CLAIMVOUCHER_RECHECK="待复审";
     public static final String CLAIMVOUCHER_PAID="已打款";
-//    审核额度
-    public static final String LIMIT_CHECK="5000.00";
-//    处理方式
-    public static final String DEAL_CREATED="创建";
+    //审核额度
+    public static final double LIMIT_CHECK=5000.00;
+
+    //处理方式
+    public static final String DEAL_CREATE="创建";
     public static final String DEAL_SUBMIT="提交";
     public static final String DEAL_UPDATE="修改";
     public static final String DEAL_BACK="打回";

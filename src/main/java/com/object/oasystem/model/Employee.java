@@ -6,6 +6,15 @@ public class Employee {
     private String name;
     private String department_sn;
     private String post;
+    private Department department;
+
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
+    }
 
     public String getSn() {
         return sn;

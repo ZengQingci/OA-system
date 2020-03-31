@@ -24,10 +24,6 @@ public class DepartmentController {
         System.out.println(model);
         return "pages/department_list";
     }
-    @GetMapping("/{sn}")
-    public Department getDepartment(String sn){
-        return departmentService.getDepartment(sn);
-    }
 //    跳转到添加页面
     @GetMapping("/to_add")
     public String toAdd(Map<String,Object> map){
