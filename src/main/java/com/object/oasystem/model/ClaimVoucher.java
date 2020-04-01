@@ -1,12 +1,22 @@
 package com.object.oasystem.model;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
+import java.util.Date;
+
 public class ClaimVoucher {
     private Integer id;
+
     private String cause;
-    private String create_sn;
-    private String create_tem;
-    private String next_deal_sn;
-    private double total_amount;
+
+    private String createSn;
+    @DateTimeFormat(pattern = "yyyy-MM-dd hh:mm")
+    private Date createTime;
+
+    private String nextDealSn;
+
+    private Double totalAmount;
+
     private String status;
 
     public Integer getId() {
@@ -25,36 +35,36 @@ public class ClaimVoucher {
         this.cause = cause;
     }
 
-    public String getCreate_sn() {
-        return create_sn;
+    public String getCreateSn() {
+        return createSn;
     }
 
-    public void setCreate_sn(String create_sn) {
-        this.create_sn = create_sn;
+    public void setCreateSn(String createSn) {
+        this.createSn = createSn;
     }
 
-    public String getCreate_tem() {
-        return create_tem;
+    public Date getCreateTime() {
+        return createTime;
     }
 
-    public void setCreate_tem(String create_tem) {
-        this.create_tem = create_tem;
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 
-    public String getNext_deal_sn() {
-        return next_deal_sn;
+    public String getNextDealSn() {
+        return nextDealSn;
     }
 
-    public void setNext_deal_sn(String next_deal_sn) {
-        this.next_deal_sn = next_deal_sn;
+    public void setNextDealSn(String nextDealSn) {
+        this.nextDealSn = nextDealSn;
     }
 
-    public double getTotal_amount() {
-        return total_amount;
+    public Double getTotalAmount() {
+        return totalAmount;
     }
 
-    public void setTotal_amount(double total_amount) {
-        this.total_amount = total_amount;
+    public void setTotalAmount(Double totalAmount) {
+        this.totalAmount = totalAmount;
     }
 
     public String getStatus() {
@@ -63,5 +73,24 @@ public class ClaimVoucher {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    private Employee creater;
+    private Employee dealer;
+
+    public Employee getCreater() {
+        return creater;
+    }
+
+    public void setCreater(Employee creater) {
+        this.creater = creater;
+    }
+
+    public Employee getDealer() {
+        return dealer;
+    }
+
+    public void setDealer(Employee dealer) {
+        this.dealer = dealer;
     }
 }

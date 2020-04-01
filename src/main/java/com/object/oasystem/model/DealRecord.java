@@ -1,12 +1,23 @@
 package com.object.oasystem.model;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
+import java.util.Date;
+
 public class DealRecord {
     private Integer id;
-    private Integer claim_voucher_id;
-    private String deal_sn;
-    private String deal_time;
-    private String deal_way;
-    private String deal_result;
+
+    private Integer claimVoucherId;
+
+    private String dealSn;
+
+    @DateTimeFormat(pattern = "yyyy-MM-dd hh:mm")
+    private Date dealTime;
+
+    private String dealWay;
+
+    private String dealResult;
+
     private String comment;
 
     public Integer getId() {
@@ -17,44 +28,44 @@ public class DealRecord {
         this.id = id;
     }
 
-    public Integer getClaim_voucher_id() {
-        return claim_voucher_id;
+    public Integer getClaimVoucherId() {
+        return claimVoucherId;
     }
 
-    public void setClaim_voucher_id(Integer claim_voucher_id) {
-        this.claim_voucher_id = claim_voucher_id;
+    public void setClaimVoucherId(Integer claimVoucherId) {
+        this.claimVoucherId = claimVoucherId;
     }
 
-    public String getDeal_sn() {
-        return deal_sn;
+    public String getDealSn() {
+        return dealSn;
     }
 
-    public void setDeal_sn(String deal_sn) {
-        this.deal_sn = deal_sn;
+    public void setDealSn(String dealSn) {
+        this.dealSn = dealSn;
     }
 
-    public String getDeal_time() {
-        return deal_time;
+    public Date getDealTime() {
+        return dealTime;
     }
 
-    public void setDeal_time(String deal_time) {
-        this.deal_time = deal_time;
+    public void setDealTime(Date dealTime) {
+        this.dealTime = dealTime;
     }
 
-    public String getDeal_way() {
-        return deal_way;
+    public String getDealWay() {
+        return dealWay;
     }
 
-    public void setDeal_way(String deal_way) {
-        this.deal_way = deal_way;
+    public void setDealWay(String dealWay) {
+        this.dealWay = dealWay;
     }
 
-    public String getDeal_result() {
-        return deal_result;
+    public String getDealResult() {
+        return dealResult;
     }
 
-    public void setDeal_result(String deal_result) {
-        this.deal_result = deal_result;
+    public void setDealResult(String dealResult) {
+        this.dealResult = dealResult;
     }
 
     public String getComment() {
@@ -63,5 +74,15 @@ public class DealRecord {
 
     public void setComment(String comment) {
         this.comment = comment;
+    }
+
+    private Employee dealer;
+
+    public Employee getDealer() {
+        return dealer;
+    }
+
+    public void setDealer(Employee dealer) {
+        this.dealer = dealer;
     }
 }

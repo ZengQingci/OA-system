@@ -2,7 +2,7 @@ package com.object.oasystem.model;
 
 public class ClaimVoucherItem {
     private Integer id;
-    private Integer claim_voucher_id;
+    private Integer claimVoucherId;
     private String item;
     private double amount;
     private String comment;
@@ -15,12 +15,12 @@ public class ClaimVoucherItem {
         this.id = id;
     }
 
-    public Integer getClaim_voucher_id() {
-        return claim_voucher_id;
+    public Integer getClaimVoucherId() {
+        return claimVoucherId;
     }
 
-    public void setClaim_voucher_id(Integer claim_voucher_id) {
-        this.claim_voucher_id = claim_voucher_id;
+    public void setClaimVoucherId(Integer claimVoucherId) {
+        this.claimVoucherId = claimVoucherId;
     }
 
     public String getItem() {
